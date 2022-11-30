@@ -87,5 +87,3 @@ args = parser.parse_args()
 
 dge(args.first_cell_type_expressions_path, args.second_cell_type_expressions_path, args.save_results_table, args.test_method, args.p_adjusted_method, args.alpha)
 
-
-
