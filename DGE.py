@@ -7,10 +7,7 @@ from statsmodels.stats.multitest import multipletests
 
 
 def check_intervals_intersect(first_ci, second_ci):   
-    are_intersect = False
-    if second_ci[0] < first_ci[0] < second_ci[1] or second_ci[0] < first_ci[1] < second_ci[1] or first_ci[0] < second_ci[0] < first_ci[1] or first_ci[0] < second_ci[1] < first_ci[1]:
-      are_intersect = True
-    return are_intersect
+    return second_ci[0] < first_ci[0] < second_ci[1] or second_ci[0] < first_ci[1] < second_ci[1] or first_ci[0] < second_ci[0] < first_ci[1] or first_ci[0] < second_ci[1] < first_ci[1]
 
 
 def check_dge_with_ci(first_table, second_table):
